@@ -1,85 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-    .srchbar1,.srchbar2,.srchbar3{
+    <style>
+        .srchbar1,
+        .srchbar2,
+        .srchbar3 {
 
-            
-border: solid;
-border-width: 1px;
-border-color: rgb(150, 144, 144);
-color: black;
-padding-top: 12px;
-padding-bottom: 12px;
-padding-left: 16px;
-padding-right: 16px;
-font-size: 16px;
-border-radius: 8px;
-margin-bottom: 12px;
-font-family: Arial, Helvetica, sans-serif;
-transition: 0.3s;
-}
-.srchbar1,.srchbar2{
-width:150px;
-margin-left: 10px;
-}
-.srchbar3{
-margin-left: 10px;
-width: 310px;
-display: block;
-font-family:Arial, Helvetica, sans-serif;
-}
-.srchbar1:hover,.srchbar2:hover,.srchbar3:hover{
-border-color: black;
-}
-.submit{
 
-background-color: brown;
-border-radius: 8px;
-width: 310px;
-margin-left: 10px;
-font-size: 18px;
-padding-top: 12px;
-padding-bottom: 12px;
-color: antiquewhite;
-font-family: 'Inclusive Sans', sans-serif;
-text-decoration: solid;
-border-width: 0px;
-transition: 0.4s;
+            border: solid;
+            border-width: 1px;
+            border-color: rgb(150, 144, 144);
+            color: black;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 0.3s;
+        }
+
+        .srchbar1,
+        .srchbar2 {
+            width: 150px;
+            margin-left: 10px;
+        }
+
+        .srchbar3 {
+            margin-left: 10px;
+            width: 310px;
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .srchbar1:hover,
+        .srchbar2:hover,
+        .srchbar3:hover {
+            border-color: black;
+        }
+
+        .submit {
+
+            background-color: brown;
+            border-radius: 8px;
+            width: 310px;
+            margin-left: 10px;
+            font-size: 18px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            color: antiquewhite;
+            font-family: 'Inclusive Sans', sans-serif;
+            text-decoration: solid;
+            border-width: 0px;
+            transition: 0.4s;
 
         }
-.submit:hover{
-background-color: rgb(170, 22, 22);
-box-shadow: 1px 1px 10px rgba(0,0,0,0.6)
-}
-</style>
+
+        .submit:hover {
+            background-color: rgb(170, 22, 22);
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6)
+        }
+    </style>
+
+    <style>
+        .matrix-table {
+            border-collapse: collapse;
+            width: 15%;
+        }
+
+        .matrix-table td {
+            border: 0px solid rgb(0, 0, 0);
+            padding: 8px;
+            text-align: center;
+            /* width: 30%; */
+        }
+    </style>
 
 </head>
+
 <body>
 
 
-    
-<form action="/signup" method="POST">{% csrf_token %}
+
+    <form action="/signup" method="POST">{% csrf_token %}
 
 
 
-<input class="srchbar1" type="search" placeholder="input" name="input">
-<input class="srchbar2" type="search" placeholder="code key" name="codekey">
-<button class="submit" name="action" value=0 ><strong>Encrypt</strong></button>
-<button class="submit" value=1 name="action"><strong>Decrypt</strong></button>
-</form>
+        <input class="srchbar1" type="search" placeholder="input" name="input">
+        <input class="srchbar2" type="search" placeholder="code key" name="codekey">
+        <button class="submit" name="action" value=0><strong>Encrypt</strong></button>
+        <button class="submit" value=1 name="action"><strong>Decrypt</strong></button>
+    </form>
 
-<button class="srchbar1" type="output" placeholder="output">   
+    <!-- <button class="srchbar1" type="output" placeholder="output"> -->
 
-{% if output_data %}
-<h2>Output:</h2>
+        
 
-<p>{{ output_data }}</p>
-{% endif %}
+
+        <div class="pc-output-value l9" id="dialogv6411c5581d498_square" >
+            
+            <table class="matrix-table" width="100px">
+                <tbody>
+                    <tr>
+                        <td >{{output_data_1}}</td>
+                        <td >{{output_data_2}}</td>
+                        <td >{{output_data_3}}</td>
+                        <td >{{output_data_4}}</td>
+                        <td >{{output_data_5}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{output_data_6}}</td>
+                        <td>{{output_data_7}}</td>
+                        <td>{{output_data_8}}</td>
+                        <td>{{output_data_9}}</td>
+                        <td>{{output_data_10}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{output_data_11}}</td>
+                        <td>{{output_data_12}}</td>
+                        <td>{{output_data_13}}</td>
+                        <td>{{output_data_14}}</td>
+                        <td>{{output_data_15}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{output_data_16}}</td>
+                        <td>{{output_data_17}}</td>
+                        <td>{{output_data_18}}</td>
+                        <td>{{output_data_19}}</td>
+                        <td>{{output_data_20}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{output_data_21}}</td>
+                        <td>{{output_data_22}}</td>
+                        <td>{{output_data_23}}</td>
+                        <td>{{output_data_24}}</td>
+                        <td>{{output_data_25}}</td>
+                    </tr>
+                </tbody>
+            </table>
+           
+
+        </div>
+
+
+        {% if output_data %}
+        <h2>Output:</h2>
+
+        <p>{{output_data}}</p>
+        {% endif %}
 
 </body>
-</html>
 
+</html>

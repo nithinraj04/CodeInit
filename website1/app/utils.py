@@ -40,6 +40,7 @@ def Diagraph(text):
 
 def FillerLetter(text):
 	k = len(text)
+	new_word = ""
 	if k % 2 == 0:
 		for i in range(0, k, 2):
 			if text[i] == text[i+1]:
@@ -67,6 +68,7 @@ def FillerLetter(text):
 			
 			else:
 				new_word = text
+	print (new_word)
 	return new_word
 
 
@@ -271,6 +273,9 @@ def decrypt(Matrix, CipherList):
 
 def finalOutput(text, key, mode):
 
+	if len(text) == 1:
+		text += 'z'
+
 	# print(text)
 	# print(key)
 	# print(mode)
@@ -323,3 +328,29 @@ def finalOutput(text, key, mode):
 
 # print(finalOutput("mango", "richie", 0))
 # print(finalOutput(finalOutput("mangoe", "richie", 0) ,"richie", 1))
+	
+def MatrixOut(word):
+
+	word = removeSpaces(toLowerCase(word))
+	for i in word:
+		if not i.isalpha():
+			return "ABCDEFGHIKLMNOPQRSTUVWXYZ"
+	key_letters = []
+	# Appends unique letters in word to key_letters
+	for i in word:  
+		if i not in key_letters:
+			key_letters.append(i)
+
+	compElements = [] # Basically key matrix made flat to an array
+	for i in key_letters:
+		if i not in compElements:
+			compElements.append(i)
+	for i in list1:
+		if i not in compElements:
+			compElements.append(i)
+
+	for i in compElements:
+		# capitalize each element
+		compElements[compElements.index(i)] = i.upper()
+	
+	return compElements

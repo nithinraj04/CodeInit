@@ -16,7 +16,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="index copy.css">
     <title>Document</title>
-    
+
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 
     <!-- <style>
@@ -64,17 +64,19 @@
                 <form action="/signup" method="POST">{% csrf_token %}
                     <div class="input1">
                         <label for="inputBox2"><b>Enter your Sentence:</b></label>
-                        <input type="text" id="inputBox" class="inpu1" name="inputBox1" style="border-width: 2px;" value={{default1}}>
+                        <input type="text" id="inputBox" class="inpu1" name="inputBox1" style="border-width: 2px;"
+                            value={{default1}}>
                     </div>
 
                     <div class="input2">
                         <h1></h1>
                         <label for="inputBox1"><b>Enter your key:</b></label>
-                        <input type="text" id="inputBox" class="inpu1" name="inputBox2" style="border-width: 2px;" value={{default2}}>
+                        <input type="text" id="inputBox" class="inpu1" name="inputBox2" style="border-width: 2px;"
+                            value={{default2}}>
                     </div>
                     <div class="buttons">
-                        <button class="submit" name="action" value="0" 
-                              style=" color: rgb(0, 0, 0);  font-family: 'Inclusive Sans' ;font-style: oblique ; font-size: large;"><b>Encrypt</b></button>
+                        <button class="submit" name="action" value="0"
+                            style=" color: rgb(0, 0, 0);  font-family: 'Inclusive Sans' ;font-style: oblique ; font-size: large;"><b>Encrypt</b></button>
                         <button class="submit" value=1 name="action"
                             style="font-family: 'Inclusive Sans'; font-style: oblique ; font-size: large;"><b>Decrypt</b></button>
 
@@ -85,22 +87,23 @@
                 <div> {% if output_data %}
 
                     <label for="inputBox1"><b>Output:</b></label>
-                    <button class="output"  name="action" style="font-family:
+                    <button class="output" name="action" style="font-family:
                      'Inclusive Sans'; font-style: oblique ; font-size: large;"><b>{{output_data}}</b></button>
-    
+
 
                     {% endif %}
-    </div>
+                </div>
 
-                
+
 
             </div>
 
             <div class="third-scroll">
 
 
-                <h1 class="heading2"   style=" letter-spacing:2px; font-style: italic; display:flex; justify-content:  space-around; font-family: 'Inclusive Sans', sans-serif;  margin-left: 30px; ">
-                   MATRIX REPRESENTATION
+                <h1 class="heading2"
+                    style=" letter-spacing:2px; font-style: italic; display:flex; justify-content:  space-around; font-family: 'Inclusive Sans', sans-serif;  margin-left: 30px; ">
+                    MATRIX REPRESENTATION
 
                 </h1>
 
@@ -154,12 +157,14 @@
 
 
         </div>
-        
-        <div class="about" style=" height:80px 'Newsreader'; margin-left: 40px; margin-right: 40px;font-size: 60px; font-weight: bold; margin-bottom: 0px;" ><p style="margin: 0%; margin-bottom: 10px;">About the Cypher</p> 
+
+        <div class="about"
+            style=" height:80px 'Newsreader'; margin-left: 40px; margin-right: 40px;font-size: 60px; font-weight: bold; margin-bottom: 0px;">
+            <p style="margin: 0%; margin-bottom: 10px;">About the Cypher</p>
         </div>
         <div class="fourth" style="font-size: larger; text-align: justify; margin-left: 100px; margin-right: 100px;">
 
-  
+
             <div>
                 <p class="text">The Playfair cipher was the first practical digraph substitution cipher. The scheme
                     was invented in 1854 by Charles Wheatstone but was named after Lord Playfair
@@ -168,7 +173,9 @@
             </div>
             <b><i>So, how does this work?</i></b>
             <br>
-            <p class="algorithm-description">The algorithm has 2 steps,which are, <b><i>5x5 Key matrix generation</i></b> and <b><i> the actual encryption</i></b>. The matrix generation is simple. The first few letters of the matrix will
+            <p class="algorithm-description">The algorithm has 2 steps,which are, <b><i>5x5 Key matrix
+                        generation</i></b> and <b><i> the actual encryption</i></b>. The matrix generation is simple.
+                The first few letters of the matrix will
                 be the unique letters of the “key”, in the relative order of their occurrence in the key. Then, the
                 remaining alphabets are filled in alphabetic order. You may notice a problem here the number of
                 alphabets is 26 while the total number of elements in matrix is 25. Hence, to make the algorithm work,
@@ -202,9 +209,22 @@
             Tada, now you can share homework without anyone knowing
             Decryption will be exact opposite of this.</p>
 
-        <br>
-        
+            <br>
+
         </div>
+
+        <div class="working">
+
+            <div class="working-head"></div>
+            <div class="subsections">
+                <div class="text22"></div>
+
+            </div>
+            <div class="subsections"></div>
+            <div class="subsections"></div>
+            <div class="subsections"></div>
+        </div>
+
 
         <div class="fifth">Powered by Slutty Pegions</div>
     </div>

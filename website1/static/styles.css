@@ -374,3 +374,9 @@ td:first-child, th:first-child {
         padding-bottom: 10px;
 
     }
+
+    .working{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+    }

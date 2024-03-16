@@ -62,12 +62,13 @@ box-shadow: 1px 1px 10px rgba(0,0,0,0.6)
 
 
     
-<form action="/signupboiler" method="POST">{% csrf_token %}
+<form action="/signup" method="POST">{% csrf_token %}
 
 
-<input class="srchbar1" type="search" placeholder="First Name" name=>
-<input class="srchbar2" type="search" placeholder="Last Name">
-<input class="srchbar3" type="search" placeholder="Email Adresss">
+
+<input class="srchbar1" type="search" placeholder="First Name" name="fname">
+<input class="srchbar2" type="search" placeholder="Last Name" name="lname">
+<input class="srchbar3" type="search" placeholder="Email Adresss" name="email">
 <button class="submit"><strong>Submit</strong></button>
 </form>
 

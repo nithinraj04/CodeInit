@@ -354,3 +354,6 @@ def MatrixOut(word):
 		compElements[compElements.index(i)] = i.upper()
 	
 	return compElements
+
+def fillPrev(text, key):
+	return text, key

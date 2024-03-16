@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponse
-from .utils import finalOutput, MatrixOut
+from .utils import finalOutput, MatrixOut, fillPrev
 
 
 # Create your views here.
@@ -41,6 +41,8 @@ def handle(request):
                                              'output_data_23' : matrix[22],
                                              'output_data_24' : matrix[23],
                                              'output_data_25' : matrix[24],
+                                             'default1' : fillPrev(input, code)[0],
+                                             'default2' : fillPrev(input, code)[1],
                                              }) 
     # output data is to be mentioned
     

@@ -231,40 +231,77 @@ def decrypt(Matrix, CipherList):
 	return deCipherList
  
 
-text_Plain = 'hide the gold in the tree stump'
+# text_Plain = 'hide the gold in the tree stump'
 
-for i in text_Plain:
-	if i == 'j':
-		text_Plain = text_Plain.replace(i, 'i')
+# for i in text_Plain:
+# 	if i == 'j':
+# 		text_Plain = text_Plain.replace(i, 'i')
 
-text_Plain = removeSpaces(toLowerCase(text_Plain))
-PlainTextList = Diagraph(FillerLetter(text_Plain))
+# text_Plain = removeSpaces(toLowerCase(text_Plain))
+# PlainTextList = Diagraph(FillerLetter(text_Plain))
 
-if len(PlainTextList[-1]) != 2:
-	PlainTextList[-1] = PlainTextList[-1]+'z'
+# if len(PlainTextList[-1]) != 2:
+# 	PlainTextList[-1] = PlainTextList[-1]+'z'
 
-key = "Monarchy"
-print("Key text:", key)
-key = toLowerCase(key)
-Matrix = generateKeyTable(key, list1)
+# key = "Monarchy"
+# print("Key text:", key)
+# key = toLowerCase(key)
+# Matrix = generateKeyTable(key, list1)
 
-print("Plain Text:", text_Plain)
-CipherList = encryptByPlayfairCipher(Matrix, PlainTextList)
+# print("Plain Text:", text_Plain)
+# CipherList = encryptByPlayfairCipher(Matrix, PlainTextList)
 
-deCipher_text = "bfckpdfimpbkrqcfzdiuillzol"
-deCipher_text = removeSpaces(toLowerCase(text_Plain))
-deCipherTextList = Diagraph(FillerLetter(text_Plain))
-deCipherList = decrypt(Matrix, CipherList)
+# deCipher_text = "bfckpdfimpbkrqcfzdiuillzol"
+# deCipher_text = removeSpaces(toLowerCase(text_Plain))
+# deCipherTextList = Diagraph(FillerLetter(text_Plain))
+# deCipherList = decrypt(Matrix, CipherList)
 
 
-CipherText = ""
-for i in CipherList:
-	CipherText += i
-print("CipherText:", CipherText)
+# CipherText = ""
+# for i in CipherList:
+# 	CipherText += i
+# print("CipherText:", CipherText)
 
-deCipherText = ""
-for i in deCipherList:
-	deCipherText += i
-print("Deciphered Text:", deCipherText)
+# deCipherText = ""
+# for i in deCipherList:
+# 	deCipherText += i
+# print("Deciphered Text:", deCipherText)
 
 # This code is Contributed by Boda_Venkata_Nikith
+
+def finalOutput(text, key, mode):
+
+	for i in text:
+		if i == 'j':
+			text = text.replace(i, 'i')
+
+	if(mode == 0):
+		text = removeSpaces(toLowerCase(text))
+		PlainTextList = Diagraph(FillerLetter(text))
+		if len(PlainTextList[-1]) != 2:
+			PlainTextList[-1] = PlainTextList[-1]+'z'
+
+		key = toLowerCase(key)
+		Matrix = generateKeyTable(key, list1)
+		CipherList = encryptByPlayfairCipher(Matrix, PlainTextList)
+		CipherText = ""
+		for i in CipherList:
+			CipherText += i
+		return CipherText
+
+	else:
+		text = removeSpaces(toLowerCase(text))
+		PlainTextList = Diagraph(FillerLetter(text))
+		if len(PlainTextList[-1]) != 2:
+			PlainTextList[-1] = PlainTextList[-1]+'z'
+
+		key = toLowerCase(key)
+		Matrix = generateKeyTable(key, list1)
+		deCipherList = decrypt(Matrix, PlainTextList)
+		deCipherText = ""
+		for i in deCipherList:
+			deCipherText += i
+		return deCipherText
+
+print(finalOutput("hide the gold in the tree stump", "Monarchy", 0))
+print(finalOutput("bfckpdfimpbkrqcfzdiuillzol", "Monarchy", 1))

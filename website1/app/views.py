@@ -1,4 +1,5 @@
 from django.shortcuts import render,HttpResponse
+from .utils import myFunction
 
 
 # Create your views here.
@@ -10,9 +11,11 @@ def handle(request):
         fname=request.POST.get("fname")
         lname=request.POST.get("lname")
         email=request.POST.get("email")
-        output_data=fname+' '+lname
+        if(fname=="" or lname=="" or email==""):
+            return HttpResponse("Please fill all the details")
         print(fname,lname,email)
-        return render(request,'signup.html',{'output_data': output_data})
+        # return HttpResponse("yo man its working")
+        return HttpResponse(myFunction())
     
     return render(request,"signup.html")
 

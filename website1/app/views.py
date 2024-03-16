@@ -8,14 +8,11 @@ def home(request):
 
 def handle(request):
     if request.method=="POST":
-        fname=request.POST.get("fname")
-        lname=request.POST.get("lname")
-        email=request.POST.get("email")
-        if(fname=="" or lname=="" or email==""):
-            return HttpResponse("Please fill all the details")
-        print(fname,lname,email)
-        # return HttpResponse("yo man its working")
-        return HttpResponse(finalOutput(fname, "Monarchy", 0))
+        input=request.POST.get("input")
+        codekey=request.POST.get("codekey")
+        
+        
+        return render(request,'signup.html',{'input': input})
     
     return render(request,"signup.html")
 

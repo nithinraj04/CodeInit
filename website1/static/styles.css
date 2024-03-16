@@ -115,6 +115,24 @@ td:first-child, th:first-child {
         cursor:grabbing; /* Change mouse cursor to pointer */
         transition: background-color 0.5s;
     }
+
+    .output:hover {
+        background-color:rgb(248, 206, 156); /* Darker shade of green */
+    }
+    
+
+    .output{
+        margin-top: 10px;
+        padding: 20px;
+        width: 50% ;
+        border-radius: 20px;
+        margin-left: 0px;
+        background-color:bisque;   
+        display: flex;
+        flex-direction: column;
+        cursor:grabbing; /* Change mouse cursor to pointer */
+        transition: background-color 0.5s;
+    }
     .submit:hover {
         background-color:rgb(248, 206, 156); /* Darker shade of green */
     }
@@ -130,7 +148,7 @@ td:first-child, th:first-child {
         width: 90%; /* Increased width */
     }
     .third-scroll{
-        
+        margin-top: 10px;
         display: flex;
         flex-direction: column;
         flex: 1;
@@ -157,11 +175,14 @@ td:first-child, th:first-child {
     
     /* Style for the input box */
     input[type="text"] {
+        font-family: 'Inclusive Sans', sans-serif;
         border-width: 1px;
         border-radius: 20px; /* Add rounded corners to the input */
         padding: 15px; /* Add some padding for better appearance */
         width: 40%; /* Set a width for the input */
         height: 25px;
+       
+        font-size: 18px;
     }
     
         
@@ -175,7 +196,7 @@ td:first-child, th:first-child {
             /* font-style: it; */
             line-height: 70px;
             margin:30px;
-            margin-top: 110px;
+            margin-top: 60px;
                 /* display: inline-block; */
             /* align-self: center; */
             

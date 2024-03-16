@@ -18,7 +18,7 @@
     <title>Document</title>
     
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-    
+
 </head>
 
 <body>
@@ -59,23 +59,21 @@
             <div class="third-para">
 
                 <form action="/signup" method="POST">{% csrf_token %}
-
-                    <div class="input">
+                    <div class="input1">
                         <label for="inputBox2"><b>Enter your Sentence:</b></label>
-                        <input type="text" id="inputBox" name="inputBox1" style=" width: 90%" value={{default1}}>
+                        <input type="text" id="inputBox" class="inpu1" name="inputBox1" value={{default1}}>
                     </div>
 
-                    <div class="input">
+                    <div class="input2">
                         <h1></h1>
                         <label for="inputBox1"><b>Enter your key:</b></label>
-                        <input type="text" id="inputBox" name="inputBox2" value={{default2}}>
+                        <input type="text" id="inputBox" class="inpu1" name="inputBox2" value={{default2}}>
                     </div>
-
                     <div class="buttons">
                         <button class="submit" name="action" value="0" 
-                            style="font-family: 'Inclusive Sans' ;font-style: oblique ; background-color:bisque; font-size: large;"><b>Encrypt</b></button>
+                            style="font-family: 'Inclusive Sans' ;font-style: oblique ; font-size: large;"><b>Encrypt</b></button>
                         <button class="submit" value=1 name="action"
-                            style="font-family: 'Inclusive Sans'; font-style: oblique ; font-size: large; background-color:bisque;"><b>Decrypt</b></button>
+                            style="font-family: 'Inclusive Sans'; font-style: oblique ; font-size: large;"><b>Decrypt</b></button>
 
                     </div>
 

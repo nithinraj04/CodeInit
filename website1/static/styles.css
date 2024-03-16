@@ -88,22 +88,35 @@
         width: 50% ;
         border-radius: 20px;
         margin-left: 0px;
-        background-color: white;   
+        background-color:bisque;   
         display: flex;
-flex-direction: column;
-            
+        flex-direction: column;
+        cursor:grabbing; /* Change mouse cursor to pointer */
+        transition: background-color 0.5s;
+    }
+    .submit:hover {
+        background-color:rgb(248, 206, 156); /* Darker shade of green */
     }
     
+    .inpu1 {
+        width: 60%; /* Initial width */
+        transition: width 0.5s ease;/* Transition effect for smooth size change */
+        /* transition: height 0.5s ease;Transition effect for smooth size change */
+    }
+    
+    /* When input box is clicked (focused), increase its width */
+    .inpu1:hover{
+        width: 90%; /* Increased width */
+    }
     .third-scroll{
         
         display: flex;
         flex-direction: column;
         flex: 1;
     }
+    
     .buttons{
-        
         display: flex;
-        
         font-style: oblique;
         font-family: 'Inclusive Sans', sans-serif;
     }

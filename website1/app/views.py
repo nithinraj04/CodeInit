@@ -8,8 +8,8 @@ def home(request):
 
 def handle(request):
     if request.method=="POST":
-        input=request.POST.get("input")
-        code=request.POST.get("codekey")
+        input=request.POST.get("inputBox1")
+        code=request.POST.get("inputBox2")
         x=request.POST.get("action")
         output=finalOutput(input, code, x)
         matrix = MatrixOut(code)

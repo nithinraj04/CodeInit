@@ -4,156 +4,510 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index copy.css">
     <title>Document</title>
     <style>
-        .srchbar1,
-        .srchbar2,
-        .srchbar3 {
 
 
-            border: solid;
-            border-width: 1px;
-            border-color: rgb(150, 144, 144);
-            color: black;
-            padding-top: 12px;
-            padding-bottom: 12px;
-            padding-left: 16px;
-            padding-right: 16px;
-            font-size: 16px;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            font-family: Arial, Helvetica, sans-serif;
-            transition: 0.3s;
+
+
+    .matrix-table {
+        border-collapse: collapse;
+        width: 15%;
+    }
+
+    .matrix-table td {
+        border: 0px solid rgb(0, 0, 0);
+        padding: 8px;
+        text-align: center;
+        /* width: 30%; */
+    }
+
+
+        .index{
+            display: flex;
+            flex-direction: column;
+            margin-top: 0px;
+        
         }
-
-        .srchbar1,
-        .srchbar2 {
-            width: 150px;
-            margin-left: 10px;
+        .navbar{
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(0, 0, 0);
+            justify-content: space-between;
+            z-index: 2;
         }
-
-        .srchbar3 {
-            margin-left: 10px;
-            width: 310px;
-            display: block;
-            font-family: Arial, Helvetica, sans-serif;
+        .second
+        {
+            width:100%;
+            height: 500px;
+            object-fit:fill;
+            filter: brightness(30%);
+            filter: blur(1%);
+            /* border-bottom-left-radius: px;
+            border-bottom-right-radius: 10px; */
         }
-
-        .srchbar1:hover,
-        .srchbar2:hover,
-        .srchbar3:hover {
-            border-color: black;
+        .third{
+            display: flex;
+            height: 610px;
+            
+            margin-right: 40px;
+            margin-left: 40px;
+        
         }
-
-        .submit {
-
-            background-color: brown;
-            border-radius: 8px;
-            width: 310px;
-            margin-left: 10px;
-            font-size: 18px;
-            padding-top: 12px;
-            padding-bottom: 12px;
-            color: antiquewhite;
+        .fourth
+        {   
+            display: flex;
+            flex-direction: column;
             font-family: 'Inclusive Sans', sans-serif;
-            text-decoration: solid;
-            border-width: 0px;
-            transition: 0.4s;
-
+            margin: 40px;
+        
+         
+        
+        }
+        .fifth{
+            display: flex;
+            height: 50px;
+            font-family: 'Inclusive Sans', sans-serif;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 0, 0);
+            color: antiquewhite;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            
+        }
+        .third-para{
+            display: flex;
+            flex: 1;
+            font-family: 'Inclusive Sans', sans-serif;
+           
+            flex-direction: column;
+        
+            margin-top: 15px;
+            margin-left: 5px;
+            text-align: justify;
+            max-height: 400px; 
+        margin-bottom: 5px; 
+        }
+        .submit{
+            margin: 20px;
+            margin-top: 40px;
+            padding: 20px;
+            width: 50% ;
+            border-radius: 20px;
+            margin-left: 0px;
+            background-color: white;   
+            display: flex;
+    flex-direction: column;
+             
+        }
+        
+        .third-scroll{
+            
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .buttons{
+            
+            display: flex;
+            
+            font-style: oblique;
+            font-family: 'Inclusive Sans', sans-serif;
+        }
+        
+        
+        .two{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr  ;
+            padding-right: 20px;        column-gap: 20px;
+            margin-bottom: 0px;
+            
+        }
+        .inputbox{
+            border-radius: 2px;
+        }
+        
+        
+        /* Style for the input box */
+        input[type="text"] {
+            border-width: 1px;
+            border-radius: 20px; /* Add rounded corners to the input */
+            padding: 15px; /* Add some padding for better appearance */
+            width: 40%; /* Set a width for the input */
+            height: 25px;
+        }
+        
+         
+            .title{
+                font-family: 'Newsreader';
+                
+                text-align: center;  
+                /* line-height: 50px; */
+                /* font-size: 50px; 
+                font-weight: 700; */
+                /* font-style: it; */
+                line-height: 70px;
+                margin:30px;
+                margin-top: 110px;
+                 /* display: inline-block; */
+                /* align-self: center; */
+                
+                /* font-family: 'Newsreader'; */
+                font-weight: 550;
+                font-size: 80px;
+                letter-spacing: -1.9px;
+                line-height: 1.2;
+                color: #000000;
+                
+            }
+            .input{
+                display:inline-block;
+            }
+            .intropara{
+                font-family: 'Inclusive Sans', sans-serif;
+                margin-top: 50px;
+                font-size: larger;
+            }
+           .intro{
+            margin: 40px;
+            margin-bottom: 15px;
+           }
+            
+            .options{
+                display: flex;
+                flex-direction: row;
+            }
+           .dw{
+                display: flex;
+                align-items: center;
+                border-radius: 7px;
+                border-width: 2px;
+                padding: 1px;
+                padding-left: 10px;
+                padding-right: 10px;
+                height: 40px;
+        
+                font-size: 15px;
+                border-style: solid;
+                margin: 7px;
+                margin-left: 3px;
+                margin-right: 6px;
+                border-color: rgb(255, 255, 255);
+             
+                font-family: 'Inclusive Sans', sans-serif;
+                color: rgb(255, 255, 255);
+                font-weight: 600;
+                transition: 0.2s;
+            }
+            .dw:hover{
+                background-color: rgb(92, 15, 165);
+            }
+            .dw:active{
+                border-color: rgb(255, 255, 255);
+                border-width: 2px;
+                border-style: solid;
+            }
+           
+            .home{
+        
+                display: flex;
+                align-items: center;
+        
+                margin: 10px;
+                margin-left: 15px;
+                margin-right: 10px;
+                font-family: 'Inclusive Sans', sans-serif;
+                color: rgb(255, 255, 255);
+                font-weight: 600;
+                padding-left: 20px;
+            }
+        
+            .crd{
+                display: flex ;
+                flex-direction: column;
+                align-content: center;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                border-radius: 4PX;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+                margin-left: 10px;
+                }
+        
+            .crdimg{
+            font-family: Arial;
+            margin-top: 0;
+            margin-bottom: 0px;
+            height: 200px;
+            width: 220px;
+            object-fit: cover;
+            margin-bottom: 12px;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+            align-content: top;
+            }
+        
+        
+            .info{
+        
+            margin-top: 0px;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-bottom: 0px;
+        
+            font-size: 12px;
+            text-align: justify;
+        
+            line-height: 15px;
+            }
+        
+            .rdmr{
+            background-color: rgb(0, 182, 55);
+            color: white;
+            border: none;
+            border-radius: 2px;
+            font-size: 11px;
+            margin: 10px;
+            padding: 5px;
+            margin-left: 50px;
+            margin-right: 50px;
+            transition: 0.3s;
+            }
+            .rdmr:hover{
+                background-color: rgb(6, 133, 59);
+               
+            }
+            .scrollf{
+                border-radius: 10px;
+                border-style: solid;
+                margin: 10px;
+                font-family: 'Inclusive Sans', sans-serif;
+                
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+                transition: 0.3s;
+                
+        
+            }
+            .scrollf:hover{
+                box-shadow: 0 0 9px rgba(0, 0, 0, 2);
+            }
+            .bro{
+                
+                
+                margin-top: 20px;
+                margin-bottom: 20px;
+                
+                margin-right: 20px;
+            }
+            .man{
+                margin: 0px;
+        
+            }
+        .title {
+            transition: font-size 0.5s ease;
+            /* Transition effect for smooth change */
         }
 
-        .submit:hover {
-            background-color: rgb(170, 22, 22);
-            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6)
+        .title:hover {
+            font-size: 90px;
+            /* Increase font size on hover */
+        }
+
+        label {
+            font-style: oblique;
+            font-family: 'Inclusive Sans';
+            opacity: 100%;
+            font-size: large;
+            color: black;
+            display: block;
+            /* Display the label as block to make it appear above the input */
+            margin-bottom: 5px;
+            /* Add some space between the label and the input */
+            padding-top: 10px;
+            padding-bottom: 10px;
+
         }
     </style>
-
-    <style>
-        .matrix-table {
-            border-collapse: collapse;
-            width: 15%;
-        }
-
-        .matrix-table td {
-            border: 0px solid rgb(0, 0, 0);
-            padding: 8px;
-            text-align: center;
-            /* width: 30%; */
-        }
-    </style>
-
 </head>
 
 <body>
+    <div class="index">
 
+        <div class="navbar">
 
+            <h2 class="home">CodeInit</h2>
+            <div class="options">
+                <p class="dw">Overview</p>
+                <p class="dw">About</p>
+                <p class="dw">Working</p>
+            </div>
 
-    <form action="/signup" method="POST">{% csrf_token %}
-
-
-
-        <input class="srchbar1" type="search" placeholder="input" name="input">
-        <input class="srchbar2" type="search" placeholder="code key" name="codekey">
-        <button class="submit" name="action" value=0><strong>Encrypt</strong></button>
-        <button class="submit" value=1 name="action"><strong>Decrypt</strong></button>
-    </form>
-
-    <!-- <button class="srchbar1" type="output" placeholder="output"> -->
-
-        
-
-
-        <div class="pc-output-value l9" id="dialogv6411c5581d498_square" >
-            
-            <table class="matrix-table" width="100px">
-                <tbody>
-                    <tr>
-                        <td >{{output_data_1}}</td>
-                        <td >{{output_data_2}}</td>
-                        <td >{{output_data_3}}</td>
-                        <td >{{output_data_4}}</td>
-                        <td >{{output_data_5}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{output_data_6}}</td>
-                        <td>{{output_data_7}}</td>
-                        <td>{{output_data_8}}</td>
-                        <td>{{output_data_9}}</td>
-                        <td>{{output_data_10}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{output_data_11}}</td>
-                        <td>{{output_data_12}}</td>
-                        <td>{{output_data_13}}</td>
-                        <td>{{output_data_14}}</td>
-                        <td>{{output_data_15}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{output_data_16}}</td>
-                        <td>{{output_data_17}}</td>
-                        <td>{{output_data_18}}</td>
-                        <td>{{output_data_19}}</td>
-                        <td>{{output_data_20}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{output_data_21}}</td>
-                        <td>{{output_data_22}}</td>
-                        <td>{{output_data_23}}</td>
-                        <td>{{output_data_24}}</td>
-                        <td>{{output_data_25}}</td>
-                    </tr>
-                </tbody>
-            </table>
-           
 
         </div>
 
+        <div class="intro">
 
-        {% if output_data %}
-        <h2>Output:</h2>
+            <h1 class="title">The FairPlay Cypher.</h1>
+            <div class="intropara">A departure from traditional rote memorization,
+                modern schools emphasize project-based learning.
+                Students are encouraged to tackle real-world problems
+                and engage in hands-on projects that require critical
+                thinking, problem-solving, and collaboration. This approach
+                not only fosters a deeper understanding of subject matter
+                but also equips students with practical skills and the ability
+                to apply their knowledge in meaningful ways.A departure from traditional rote memorization,
+                modern schools emphasize project-based learning.</div>
 
-        <p>{{output_data}}</p>
-        {% endif %}
+
+
+
+        </div>
+
+        <div class="third">
+
+            <div class="third-para">
+
+                <form action="/signup" method="POST">{% csrf_token %}
+
+                    <div class="input">
+                        <label for="inputBox2"><b>Enter your Sentence:</b></label>
+                        <input type="text" id="inputBox" name="inputBox1" style=" width: 90%">
+                    </div>
+
+                    <div class="input">
+                        <h1></h1>
+                        <label for="inputBox1"><b>Enter your key:</b></label>
+                        <input type="text" id="inputBox" name="inputBox2">
+                    </div>
+
+                    <div class="buttons">
+                        <button class="submit" name="action" value="0"
+                            style="font-family: 'Inclusive Sans' ;font-style: oblique ; background-color:bisque; font-size: large;"><b>Encrypt</b></button>
+                        <button class="submit" value=1 name="action"
+                            style="font-family: 'Inclusive Sans'; font-style: oblique ; font-size: large; background-color:bisque;"><b>Decrypt</b></button>
+
+                    </div>
+
+                </form>
+
+                {% if output_data %}
+                <h2>Output:</h2>
+
+                <p>{{output_data}}</p>
+                {% endif %}
+
+
+            </div>
+
+            <div class="third-scroll">
+
+
+                <h1 class="heading2" style=" display:flex; justify-content:  space-around; font-family: 'Inclusive Sans', sans-serif;  margin-left: 30px;">
+                    Matrix Representation
+                </h1>
+
+                <div class="pc-output-value l9" style="display:flex; justify-content:  space-around;" id="dialogv6411c5581d498_square">
+
+                    <table class="matrix-table" width="100px">
+                        <tbody>
+                            <tr>
+                                <td>{{output_data_1}}</td>
+                                <td>{{output_data_2}}</td>
+                                <td>{{output_data_3}}</td>
+                                <td>{{output_data_4}}</td>
+                                <td>{{output_data_5}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{output_data_6}}</td>
+                                <td>{{output_data_7}}</td>
+                                <td>{{output_data_8}}</td>
+                                <td>{{output_data_9}}</td>
+                                <td>{{output_data_10}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{output_data_11}}</td>
+                                <td>{{output_data_12}}</td>
+                                <td>{{output_data_13}}</td>
+                                <td>{{output_data_14}}</td>
+                                <td>{{output_data_15}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{output_data_16}}</td>
+                                <td>{{output_data_17}}</td>
+                                <td>{{output_data_18}}</td>
+                                <td>{{output_data_19}}</td>
+                                <td>{{output_data_20}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{output_data_21}}</td>
+                                <td>{{output_data_22}}</td>
+                                <td>{{output_data_23}}</td>
+                                <td>{{output_data_24}}</td>
+                                <td>{{output_data_25}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="fourth">
+
+            <h1 class="man">Our Programmes</h1>
+            <p class="pone">
+                Recognizing that success in the 21st century
+                job market requires more than just academic
+                knowledge, modern schools place a strong
+                emphasis on the development of soft skills.
+                Communication, teamwork, adaptability, and resilience
+                are considered crucial attributes that students should have.
+                Recognizing that success in the 21st century
+                job market requires more than just academic
+                knowledge, modern schools place a strong
+                emphasis on the development of soft skills.
+                Communication, teamwork, adaptability, and resilience
+                are considered crucial attributes that students should haveRecognizing that success in the 21st
+                century
+                job market requires more than just academic
+                knowledge, modern schools place a strong
+                emphasis on the development of soft skills.
+                Communication, teamwork, adaptability, and resilience
+                are considered crucial attributes that students should have.
+                Recognizing that success in the 21st century
+                job market requires more than just academic
+                knowledge, modern schools place a strong
+                emphasis on the development of soft skills.
+                Communication, teamwork, adaptability, and resilience
+                are considered crucial attributes that students should have.
+            </p>
+
+        </div>
+
+        <div class="fifth">Powered by richie@955</div>
+    </div>
+
+
+
+
+
 
 </body>
 

@@ -4,7 +4,10 @@ from django.shortcuts import render,HttpResponse
 def home(request):
     return render(request,"index.html")
 
-def signup(request):
+def handle(request):
+    if request.method=="POST":
+        
+        return HttpResponse("yo man its working")
     return render(request,"signup.html")
 
 

@@ -61,17 +61,17 @@
                 <form action="/signup" method="POST">{% csrf_token %}
                     <div class="input1">
                         <label for="inputBox2"><b>Enter your Sentence:</b></label>
-                        <input type="text" id="inputBox" class="inpu1" name="inputBox1" value={{default1}}>
+                        <input type="text" id="inputBox" class="inpu1" name="inputBox1" style="border-width: 2px;" value={{default1}}>
                     </div>
 
                     <div class="input2">
                         <h1></h1>
                         <label for="inputBox1"><b>Enter your key:</b></label>
-                        <input type="text" id="inputBox" class="inpu1" name="inputBox2" value={{default2}}>
+                        <input type="text" id="inputBox" class="inpu1" name="inputBox2" style="border-width: 2px;" value={{default2}}>
                     </div>
                     <div class="buttons">
                         <button class="submit" name="action" value="0" 
-                            style="font-family: 'Inclusive Sans' ;font-style: oblique ; font-size: large;"><b>Encrypt</b></button>
+                              style=" color: rgb(0, 0, 0);  font-family: 'Inclusive Sans' ;font-style: oblique ; font-size: large;"><b>Encrypt</b></button>
                         <button class="submit" value=1 name="action"
                             style="font-family: 'Inclusive Sans'; font-style: oblique ; font-size: large;"><b>Decrypt</b></button>
 
@@ -79,20 +79,25 @@
 
                 </form>
 
-                {% if output_data %}
-                <h2>Output:</h2>
+                <div> {% if output_data %}
 
-                <p>{{output_data}}</p>
-                {% endif %}
+                    <label for="inputBox1"><b>Output:</b></label>
+                    <button class="output"  name="action" style="font-family:
+                     'Inclusive Sans'; font-style: oblique ; font-size: large;"><b>{{output_data}}</b></button>
+    
 
+                    {% endif %}
+    </div>
+
+                
 
             </div>
 
             <div class="third-scroll">
 
 
-                <h1 class="heading2" style=" display:flex; justify-content:  space-around; font-family: 'Inclusive Sans', sans-serif;  margin-left: 30px;">
-                    Matrix Representation
+                <h1 class="heading2"   style=" letter-spacing:2px; font-style: italic; display:flex; justify-content:  space-around; font-family: 'Inclusive Sans', sans-serif;  margin-left: 30px; ">
+                   MATRIX REPRESENTATION
                 </h1>
 
                 <div class="pc-output-value l9" style="display:flex; justify-content:  space-around;" id="dialogv6411c5581d498_square">

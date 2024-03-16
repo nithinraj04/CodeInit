@@ -10,8 +10,9 @@ def handle(request):
         fname=request.POST.get("fname")
         lname=request.POST.get("lname")
         email=request.POST.get("email")
+        output_data=fname+' '+lname
         print(fname,lname,email)
-        return HttpResponse("yo man its working")
+        return render(request,'signup.html',{'output_data': output_data})
     
     return render(request,"signup.html")
 

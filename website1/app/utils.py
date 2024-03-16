@@ -98,6 +98,8 @@ def generateKeyTable(word, list1):
 		matrix.append(compElements[:5])
 		compElements = compElements[5:]
 
+	print (matrix)
+
 	return matrix
 
 
@@ -269,7 +271,6 @@ def decrypt(Matrix, CipherList):
 # 	deCipherText += i
 # print("Deciphered Text:", deCipherText)
 
-# This code is Contributed by Boda_Venkata_Nikith
 
 def finalOutput(text, key, mode):
 

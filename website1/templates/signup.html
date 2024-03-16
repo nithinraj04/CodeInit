@@ -19,6 +19,9 @@
     
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 
+    <!-- <style>
+        
+    </style> -->
 </head>
 
 <body>
@@ -98,9 +101,11 @@
 
                 <h1 class="heading2"   style=" letter-spacing:2px; font-style: italic; display:flex; justify-content:  space-around; font-family: 'Inclusive Sans', sans-serif;  margin-left: 30px; ">
                    MATRIX REPRESENTATION
+
                 </h1>
 
-                <div class="pc-output-value l9" style="display:flex; justify-content:  space-around;" id="dialogv6411c5581d498_square">
+                <div class="pc-output-value l9" style="display:flex; justify-content:  space-around;"
+                    id="dialogv6411c5581d498_square">
 
                     <table class="matrix-table" width="100px">
                         <tbody>
@@ -149,36 +154,59 @@
 
 
         </div>
+        
+        <div class="about" style=" height:80px 'Newsreader'; margin-left: 40px; margin-right: 40px;font-size: 60px; font-weight: bold; margin-bottom: 0px;" ><p style="margin: 0%; margin-bottom: 10px;">About the Cypher</p> 
+        </div>
+        <div class="fourth" style="font-size: larger; text-align: justify; margin-left: 100px; margin-right: 100px;">
 
-        <div class="fourth">
+  
+            <div>
+                <p class="text">The Playfair cipher was the first practical digraph substitution cipher. The scheme
+                    was invented in 1854 by Charles Wheatstone but was named after Lord Playfair
+                    who promoted the use of the cipher. In Playfair cipher unlike traditional cipher
+                    we encrypt a pair of alphabets(digraphs) instead of a single alphabet.</p>
+            </div>
+            <b5>So, how does this work?</b5>
+            <h3>TWO STEPS</h3>
 
-            <h1 class="man">Our Programmes</h1>
-            <p class="pone">
-                Recognizing that success in the 21st century
-                job market requires more than just academic
-                knowledge, modern schools place a strong
-                emphasis on the development of soft skills.
-                Communication, teamwork, adaptability, and resilience
-                are considered crucial attributes that students should have.
-                Recognizing that success in the 21st century
-                job market requires more than just academic
-                knowledge, modern schools place a strong
-                emphasis on the development of soft skills.
-                Communication, teamwork, adaptability, and resilience
-                are considered crucial attributes that students should haveRecognizing that success in the 21st
-                century
-                job market requires more than just academic
-                knowledge, modern schools place a strong
-                emphasis on the development of soft skills.
-                Communication, teamwork, adaptability, and resilience
-                are considered crucial attributes that students should have.
-                Recognizing that success in the 21st century
-                job market requires more than just academic
-                knowledge, modern schools place a strong
-                emphasis on the development of soft skills.
-                Communication, teamwork, adaptability, and resilience
-                are considered crucial attributes that students should have.
-            </p>
+            <ul>
+                <li class="bullet">5x5 Key matrix generation</li>
+                <li class="bullet">The actual encryption</li>
+            </ul>
+
+            <p class="algorithm-description">Key matrix generation is simple. The first few letters of the matrix will
+                be the unique letters of the “key”, in the relative order of their occurrence in the key. Then, the
+                remaining alphabets are filled in alphabetic order. You may notice a problem here the number of
+                alphabets is 26 while the total number of elements in matrix is 25. Hence, to make the algorithm work,
+                we drop a letter, which is usually either i or j</p>
+
+            <p class="text">Now, how exactly does the “actual encryption” works?</p>
+            <p class="text">
+                Firstly, the text to be encrypted is modified so as to be compatible with the
+                algorithm. This involves two things
+                • For the purpose of encryption, we have to pair two adjacent letters in the
+                message. Each pair is called diagraph. Same letters cannot be paired. So,
+                the message must be modified accordingly. To do this, add a bogus letter
+                (say ‘x’) in place of one of them.
+                • The length of the message, after satisfying above condition, must be of
+                even parity. To make it even, add a bogus letter (usually ‘z’) at the last
+                position of the message to complete the pair</p>
+            <p class="text">Once the above two conditions are satisfied, we proceed to the encryption. the
+                encryption process is governed by 3 rules which are as follows:
+            <ul style="padding-left: 130px; padding-right: 130px; ;">
+                <li class="bullet">
+                    If both elements of a digraph belong to a same row in the key matrix, their
+                    corresponding encryption will be the element immediately to the right of
+                    each element (wraps around as well).</li>
+                <li class="bullet">If both elements of a digraph belong to a same column in the key matrix,
+                    their corresponding encryption will be the element immediately below
+                    each element (wraps around as well).</li>
+                <li class="bullet">Else, the two elements will form the diagonally opposite corners of a
+                    rectangle. Then their encryption will be the elements in other two corners,
+                    taken horizontally.</li>
+            </ul>
+            Tada, now you can share homework without anyone knowing
+            Decryption will be exact opposite of this.</p>
 
         </div>
 

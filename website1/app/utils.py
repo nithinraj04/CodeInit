@@ -275,6 +275,17 @@ def finalOutput(text, key, mode):
 	# print(key)
 	# print(mode)
 
+	if(text == "" or key == ""):
+		return "Please enter the text and key"
+	
+	for i in text:
+		if not i.isalpha():
+			return "Please enter only alphabets in the text"
+		
+	for i in key:
+		if not i.isalpha():
+			return "Please enter only alphabets in the key"
+
 	mode = int(mode)
 
 	for i in text:

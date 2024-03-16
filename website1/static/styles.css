@@ -1,12 +1,32 @@
 .matrix-table {
-    border-collapse: collapse;
-    width: 15%;
+    border-collapse: separate;
+    /* border: solid black 1px; */
+    border-radius: 10px;
+    width: 55%;
+}
+
+td, th {
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+}
+
+th {
+    background-color: blue;
+    border-top: none;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
 }
 
 .matrix-table td {
-    border: 0px solid rgb(0, 0, 0);
-    padding: 8px;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 16px;
     text-align: center;
+    font-family: 'Inclusive Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
     /* width: 30%; */
 }
 

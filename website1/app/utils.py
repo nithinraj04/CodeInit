@@ -303,5 +303,5 @@ def finalOutput(text, key, mode):
 			deCipherText += i
 		return deCipherText
 
-print(finalOutput("hide the gold in the tree stump", "Monarchy", 0))
-print(finalOutput("agpdga", "Monarchy", 1))
+print(finalOutput("apple", "richie", 0))
+print(finalOutput("kvqkge", "richie", 1))

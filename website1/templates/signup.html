@@ -66,13 +66,20 @@ box-shadow: 1px 1px 10px rgba(0,0,0,0.6)
 
 
 
-<input class="srchbar1" type="search" placeholder="input" name="input1">
-<input class="srchbar2" type="search" placeholder="code_key" name="codekey">
-<button class="submit"><strong>Encrypt</strong></button>
-<button class="submit"><strong>Decrypt</strong></button>
+<input class="srchbar1" type="search" placeholder="input" name="input">
+<input class="srchbar2" type="search" placeholder="code key" name="codekey">
+<button class="submit" name="action" value=0 ><strong>Encrypt</strong></button>
+<button class="submit" value=1 name="action"><strong>Decrypt</strong></button>
 </form>
 
-<button class="srchbar1" type="output" placeholder="output">   {{ output_text }}</button>
+<button class="srchbar1" type="output" placeholder="output">   
+
+{% if output_data %}
+<h2>Output:</h2>
+
+<p>{{ output_data }}</p>
+{% endif %}
 
 </body>
 </html>
+

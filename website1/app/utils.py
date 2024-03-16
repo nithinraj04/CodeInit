@@ -271,6 +271,12 @@ def decrypt(Matrix, CipherList):
 
 def finalOutput(text, key, mode):
 
+	# print(text)
+	# print(key)
+	# print(mode)
+
+	mode = int(mode)
+
 	for i in text:
 		if i == 'j':
 			text = text.replace(i, 'i')
@@ -287,6 +293,7 @@ def finalOutput(text, key, mode):
 		CipherText = ""
 		for i in CipherList:
 			CipherText += i
+		# print(CipherText)
 		return CipherText
 
 	else:
@@ -303,5 +310,5 @@ def finalOutput(text, key, mode):
 			deCipherText += i
 		return deCipherText
 
-print(finalOutput("hide the gold in the tree stump", "Monarchy", 0))
-print(finalOutput("agpdga", "Monarchy", 1))
+# print(finalOutput("mango", "richie", 0))
+# print(finalOutput(finalOutput("mangoe", "richie", 0) ,"richie", 1))

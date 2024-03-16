@@ -8,16 +8,15 @@ def home(request):
 
 def handle(request):
     if request.method=="POST":
-        fname=request.POST.get("fname")
-        lname=request.POST.get("lname")
-        email=request.POST.get("email")
-        if(fname=="" or lname=="" or email==""):
-            return HttpResponse("Please fill all the details")
-        print(fname,lname,email)
-        # return HttpResponse("yo man its working")
-        return HttpResponse(finalOutput(fname, "Monarchy", 0))
+        input=request.POST.get("input")
+        code=request.POST.get("codekey")
+        x=request.POST.get("action")
+        output=finalOutput(input, code, x)
+        print(input,code)
+        # output=input+ code
+        return render(request,'signup.html',{'output_data': output}) 
+    # output data is to be mentioned
     
     return render(request,"signup.html")
-
 
 

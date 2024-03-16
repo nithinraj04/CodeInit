@@ -304,4 +304,4 @@ def finalOutput(text, key, mode):
 		return deCipherText
 
 print(finalOutput("hide the gold in the tree stump", "Monarchy", 0))
-print(finalOutput("bfckpdfimpbkrqcfzdiuillzol", "Monarchy", 1))
+print(finalOutput("agpdga", "Monarchy", 1))

@@ -338,6 +338,15 @@ def MatrixOut(word):
 	for i in word:
 		if not i.isalpha():
 			return "ABCDEFGHIKLMNOPQRSTUVWXYZ"
+		
+	for i in word:
+		if i == 'j':
+			word = word.replace(i, 'i')
+		
+	# for i in range(len(word)):
+	# 	if word[i] == 'j':
+	# 		word = word[:i] + 'j' + word[i:]
+
 	key_letters = []
 	# Appends unique letters in word to key_letters
 	for i in word:  

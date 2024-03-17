@@ -4,7 +4,7 @@ from .utils import finalOutput, MatrixOut, fillPrev
 
 # Create your views here.
 def home(request):
-    return render(request,"index.html")
+    return render(request,"signup.html")
 
 def handle(request):
     if request.method=="POST":

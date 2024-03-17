@@ -2,17 +2,16 @@
     border-collapse: separate;
     /* border: solid black 1px; */
     border-radius: 10px;
-    width: 55%;
+    width: 342px;
 
 }
 
 td, th {
-    border-left:solid black 1px;
-    border-top:solid black 1px;
+    border-left:solid black 2px;
+    border-top:solid black 2px;
 }
 
 th {
-    background-color: blue;
     border-top: none;
 }
 
@@ -21,14 +20,26 @@ td:first-child, th:first-child {
 }
 
 .matrix-table td {
-    border: 1.5px solid rgb(0, 0, 0);
+    color: #000000;
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 10px;
-    padding: 16px;
+    padding: 12px;
     text-align: center;
     font-family: 'Inclusive Sans', sans-serif;
     font-weight: bold;
+    background-color: #ffffff;
     font-size: 20pt;
-    /* width: 30%; */
+    width: 32px;
+   
+    
+}
+.matrix-table td:hover{
+    transform: scale(0.9);
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    transition: background-color 1s ease;
+    transition: transform 0.1s ease;
+
 }
 
 
@@ -61,7 +72,7 @@ td:first-child, th:first-child {
     }
     .third{
         display: flex;
-        height: 610px;
+        height: 510px;
         
         margin-right: 40px;
         margin-left: 40px;
@@ -73,6 +84,7 @@ td:first-child, th:first-child {
         flex-direction: column;
         font-family: 'Inclusive Sans', sans-serif;
         margin: 40px;
+        margin-bottom: 0px;
     
         
     
@@ -89,37 +101,44 @@ td:first-child, th:first-child {
         border-bottom-right-radius: 10px;
         
     }
+
+    html{
+        display: flex;
+        flex-direction: column;
+    }
     .third-para{
         display: flex;
         flex: 1;
         font-family: 'Inclusive Sans', sans-serif;
         
         flex-direction: column;
-    
-        margin-top: 15px;
+        flex:3;
+        margin-top: 10px;
         margin-left: 5px;
         text-align: justify;
         max-height: 400px; 
     margin-bottom: 5px; 
     }
     .submit{
+        color: aliceblue;
         margin: 20px;
         margin-top: 40px;
-        padding: 20px;
+       align-items: center;
+       height: 60px;
         width: 50% ;
         border-radius: 20px;
         margin-left: 0px;
-        background-color:bisque;   
+        padding-top: 18px;
+        background-color: rgb(55, 55, 55) ;
         display: flex;
         flex-direction: column;
         cursor:grabbing; /* Change mouse cursor to pointer */
         transition: background-color 0.5s;
     }
 
-    .output:hover {
-        background-color:rgb(248, 206, 156); /* Darker shade of green */
-    }
-    
+ 
+ 
+
 
     .output{
         margin-top: 10px;
@@ -127,15 +146,27 @@ td:first-child, th:first-child {
         width: 50% ;
         border-radius: 20px;
         margin-left: 0px;
-        background-color:bisque;   
+        background-color:#ffffff;   
         display: flex;
         flex-direction: column;
         cursor:grabbing; /* Change mouse cursor to pointer */
         transition: background-color 0.5s;
     }
     .submit:hover {
-        background-color:rgb(248, 206, 156); /* Darker shade of green */
+        background-color: rgb(24, 24, 24)  ;/* Darker shade of green */
     }
+
+
+    .working-head
+{
+    
+transition: font-size 0.5s ease;
+}
+.working-head:hover
+{
+font-size : 65px;
+
+}
     
     .inpu1 {
         width: 60%; /* Initial width */
@@ -148,10 +179,14 @@ td:first-child, th:first-child {
         width: 90%; /* Increased width */
     }
     .third-scroll{
-        margin-top: 10px;
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
-        flex: 1;
+        flex: 2;
+        border: 5px solid;
+        margin-left: 30px;
+        margin-bottom: 25px;
+        border-radius: 10px;
     }
     
     .buttons{
@@ -172,7 +207,21 @@ td:first-child, th:first-child {
         border-radius: 2px;
     }
     
-    
+        
+    .heading2{
+        transition: font-size 0.5s ease;
+    }
+    .heading2:hover{
+        font-size :35px;
+    }
+
+    .head2{
+        transition: font-size 0.5s ease;
+    }
+    .head2:hover{
+        font-size :63px;
+    }
+
     /* Style for the input box */
     input[type="text"] {
         font-family: 'Inclusive Sans', sans-serif;
@@ -196,7 +245,8 @@ td:first-child, th:first-child {
             /* font-style: it; */
             line-height: 70px;
             margin:30px;
-            margin-top: 60px;
+            margin-top: 90px;
+            padding-top: 20px;
                 /* display: inline-block; */
             /* align-self: center; */
             
@@ -225,6 +275,10 @@ td:first-child, th:first-child {
             display: flex;
             flex-direction: row;
         }
+
+        html{
+            scroll-behavior:smooth;
+        }
         .dw{
             display: flex;
             align-items: center;
@@ -234,7 +288,7 @@ td:first-child, th:first-child {
             padding-left: 10px;
             padding-right: 10px;
             height: 40px;
-    
+            text-decoration: none;
             font-size: 15px;
             border-style: solid;
             margin: 7px;
@@ -245,13 +299,14 @@ td:first-child, th:first-child {
             font-family: 'Inclusive Sans', sans-serif;
             color: rgb(255, 255, 255);
             font-weight: 600;
-            transition: 0.2s;
+            transition: 0.3s;
         }
         .dw:hover{
-            background-color: rgb(92, 15, 165);
+            background-color: rgb(181, 181, 181);
+
         }
         .dw:active{
-            border-color: rgb(255, 255, 255);
+            border-color: rgb(45, 45, 45);
             border-width: 2px;
             border-style: solid;
         }
@@ -374,9 +429,48 @@ td:first-child, th:first-child {
         padding-bottom: 10px;
 
     }
+    .working-head{
+        font-weight: 550;
+            font-size: 60px;
+            font-family: 'Inclusive Sans';
+        margin-left: 40px;
+        margin-right: 40px;
+        height: 50px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        padding-top: 30px;
+        font-weight: bold;
+
+    }
 
     .working{
         display: flex;
         flex-direction: column;
         height: 500px;
+       
+    }
+    .subsections{
+        display: flex;
+        margin-left: 100px; margin-right: 100px;
+        
+        
+    }
+    .img{
+        display: flex;
+        flex: 1;
+        height:300px;
+        width: 300px;
+        margin: 30px;
+    }
+    .tex22{
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        font-family: 'Inclusive Sans';
+        font-size: 25px;
+        display:flex ;
+        flex: 3;
+        margin: 20px;
+        text-align: justify;
+        font-weight: bold;
     }

@@ -43,7 +43,7 @@
 
     <div class="intro">
 
-        <h1 class="title">The FairPlay Cypher.</h1>
+        <h1 class="title">The Playfair Cipher</h1>
         <div class="intropara">The Playfair cipher
             is a classical symmetric encryption method that transforms plaintext into ciphertext,
             making it unreadable to anyone without the decryption key. Renowned for its simplicity yet effectiveness,
@@ -175,21 +175,21 @@
 
 
             <div>
-                <p class="text">The Playfair cipher was the first practical digraph substitution cipher. this scheme
+                <p class="text">The Playfair cipher was the first practical digraph substitution cipher. This scheme
                     was invented in 1854 by Charles Wheatstone, but was named after Lord Playfair
                     who promoted the use of this cipher. In Playfair cipher, unlike traditional cipher,
                     we encrypt a pair of alphabets ie, diagraphs instead of a single alphabet.</p>
             </div>
             <b><i>So, how does this work?</i></b>
             <br>
-            <p class="algorithm-description">The algorithm has 2 steps, which are, <b><i>5x5 Key matrix
-                        generation</i></b> and <b><i> the actual encryption</i></b>. The matrix generation is simple.
+            <p class="algorithm-description">The algorithm has 2 steps, which are, <b><i>5x5 Key Matrix
+                        Generation</i></b> and <b><i> the Actual Encryption</i></b>. The matrix generation is simple.
                 The first unique letters of the 'key' will fill the initial matrix entires, in the relative order of
                 their occurrence in the key. Then, the
                 remaining of the 26 alphabets are filled in alphabetic order. You may notice a problem here, that is the
                 number of
                 alphabets is 26 while the total number of elements in matrix is 25. Hence, to make the algorithm work,
-                we drop a letter, which is usually either i or j</p>
+                we drop a letter, which is usually either i or j.</p>
 
             <p class="text">Now, how exactly does the <b><i>'actual encryption'</i></b> take place?</p>
             <p class="text">
@@ -220,7 +220,7 @@
             Tada, now you can share your homework without anyone knowing! ;p
             <br>
             <br>
-            <b>Decryption will be exact opposite of this.</b></p>
+            <b>Decryption will be the exact opposite of this.</b></p>
 
             <br>
         </div>
@@ -234,8 +234,8 @@
 
             <div class="subsections">
                 <div class="tex22">
-                    This will be the key-matrix formed from our key 'MANGO' &
-                    The digraph formed from our text 'apple' will be 'AP-PL-EZ'
+                    This will be the key-matrix formed from our key 'MANGO', and
+                    the digraph formed from our to be encrypted text, 'apple' will be AP-PL-EZ.
                 </div>
                 <div class="img"><img src="{% static 'images/empty.jpg' %}" alt="Description of the image"></div>
             </div>
@@ -243,12 +243,12 @@
             <div class="subsections">
 
                 <div class="img"><img src="{% static 'images/1.jpg' %}" alt="Description of the image"></div>
-                <div class="tex22">As A and P are neither in same row nor in same column, the letters belonging to
+                <div class="tex22">As A and P are neither in same row nor in the same column, the letters belonging to the
                     corners of the rectangle formed by A and P, paired horizontally, are taken for encryption.</div>
             </div>
 
             <div class="subsections">
-                <div class="tex22">As P and L belong to the same row, the letters to the immediate right of these
+                <div class="tex22">Now, as P and L belong to the same row, the letters to the immediate right of these
                     letters are taken for encryption.</div>
                 <div class="img"><img src="{% static 'images/2.jpg' %}" alt="Description of the image"></div>
             </div>
@@ -256,7 +256,7 @@
             <div class="subsections">
 
                 <div class="img"><img src="{% static 'images/3.jpg' %}" alt="Description of the image"></div>
-                <div class="tex22">As E and Z are neither in same row nor in same column, the letters belonging to
+                <div class="tex22">Finally, as E and Z are neither in same row nor in same column, the letters belonging to
                     corners of the rectangle formed by E and Z, paired horizontally, are taken for encryption.</div>
             </div>
         </div>

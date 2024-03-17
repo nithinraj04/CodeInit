@@ -16,7 +16,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="index copy.css">
     <title>Document</title>
-    
+
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 
     <!-- <style>
@@ -25,169 +25,184 @@
 </head>
 
 <body>
-    <div class="index">
-
-        <div class="navbar">
-
-            <h2 class="home">CodeInit</h2>
-            <div class="options">
-                <p class="dw">Overview</p>
-                <p class="dw">About</p>
-                <p class="dw">Working</p>
-            </div>
 
 
+    <div><a Name="intro"></a></div>
+
+    <div class="navbar">
+
+        <h2 class="home">Code.Init( )</h2>
+        <div class="options">
+            <a href="#intro" class="dw">Overview</a>
+            <a href="#about" class="dw">About</a>
+            <a href="#working" class="dw">Working</a>
         </div>
 
-        <div class="intro">
 
-            <h1 class="title">The FairPlay Cypher.</h1>
-            <div class="intropara">A departure from traditional rote memorization,
-                modern schools emphasize project-based learning.
-                Students are encouraged to tackle real-world problems
-                and engage in hands-on projects that require critical
-                thinking, problem-solving, and collaboration. This approach
-                not only fosters a deeper understanding of subject matter
-                but also equips students with practical skills and the ability
-                to apply their knowledge in meaningful ways.A departure from traditional rote memorization,
-                modern schools emphasize project-based learning.</div>
-
-
-
-
-        </div>
-
-        <div class="third">
-
-            <div class="third-para">
-
-                <form action="/signup" method="POST">{% csrf_token %}
-                    <div class="input1">
-                        <label for="inputBox2"><b>Enter your Sentence:</b></label>
-                        <input type="text" id="inputBox" class="inpu1" name="inputBox1" style="border-width: 2px;" value={{default1}}>
-                    </div>
-
-                    <div class="input2">
-                        <h1></h1>
-                        <label for="inputBox1"><b>Enter your key:</b></label>
-                        <input type="text" id="inputBox" class="inpu1" name="inputBox2" style="border-width: 2px;" value={{default2}}>
-                    </div>
-                    <div class="buttons">
-                        <button class="submit" name="action" value="0" 
-                              style=" color: rgb(0, 0, 0);  font-family: 'Inclusive Sans' ;font-style: oblique ; font-size: large;"><b>Encrypt</b></button>
-                        <button class="submit" value=1 name="action"
-                            style="font-family: 'Inclusive Sans'; font-style: oblique ; font-size: large;"><b>Decrypt</b></button>
-
-                    </div>
-
-                </form>
-
-                <div> {% if output_data %}
-
-                    <label for="inputBox1"><b>Output:</b></label>
-                    <button class="output"  name="action" style="font-family:
-                     'Inclusive Sans'; font-style: oblique ; font-size: large;"><b>{{output_data}}</b></button>
-    
-
-                    {% endif %}
     </div>
 
-                
+    <div class="intro">
 
-            </div>
+        <h1 class="title">The Playfair Cipher</h1>
+        <div class="intropara">The Playfair cipher
+            is a classical symmetric encryption method that transforms plaintext into ciphertext,
+            making it unreadable to anyone without the decryption key. Renowned for its simplicity yet effectiveness,
+            the Playfair cipher played a pivotal role in secure communication during pivotal historical moments,
+            from military operations to diplomatic exchanges.</div>
 
-            <div class="third-scroll">
 
 
-                <h1 class="heading2"   style=" letter-spacing:2px; font-style: italic; display:flex; justify-content:  space-around; font-family: 'Inclusive Sans', sans-serif;  margin-left: 30px; ">
-                   MATRIX REPRESENTATION
 
-                </h1>
+    </div>
 
-                <div class="pc-output-value l9" style="display:flex; justify-content:  space-around;"
-                    id="dialogv6411c5581d498_square">
+    <div class="third">
 
-                    <table class="matrix-table" width="100px">
-                        <tbody>
-                            <tr>
-                                <td>{{output_data_1}}</td>
-                                <td>{{output_data_2}}</td>
-                                <td>{{output_data_3}}</td>
-                                <td>{{output_data_4}}</td>
-                                <td>{{output_data_5}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{output_data_6}}</td>
-                                <td>{{output_data_7}}</td>
-                                <td>{{output_data_8}}</td>
-                                <td>{{output_data_9}}</td>
-                                <td>{{output_data_10}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{output_data_11}}</td>
-                                <td>{{output_data_12}}</td>
-                                <td>{{output_data_13}}</td>
-                                <td>{{output_data_14}}</td>
-                                <td>{{output_data_15}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{output_data_16}}</td>
-                                <td>{{output_data_17}}</td>
-                                <td>{{output_data_18}}</td>
-                                <td>{{output_data_19}}</td>
-                                <td>{{output_data_20}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{output_data_21}}</td>
-                                <td>{{output_data_22}}</td>
-                                <td>{{output_data_23}}</td>
-                                <td>{{output_data_24}}</td>
-                                <td>{{output_data_25}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <div class="third-para">
 
+            <form action="/signup" method="POST">{% csrf_token %}
+                <div class="input1">
+                    <label for="inputBox2"><b>Enter your Sentence:</b></label>
+                    <input type="text" id="inputBox" class="inpu1" name="inputBox1" style="border-width: 2px;"
+                        value={{default1}}>
+                </div>
+
+                <div class="input2">
+                    <h1></h1>
+                    <label for="inputBox1"><b>Enter your key:</b></label>
+                    <input type="text" id="inputBox" class="inpu1" name="inputBox2" style="border-width: 2px;"
+                        value={{default2}}>
+                </div>
+                <div class="buttons">
+                    <button class="submit" name="action" value="0"
+                        style="  font-family: 'Inclusive Sans' ;font-style: oblique ; font-size: large;"><b>Encrypt</b></button>
+                    <button class="submit" value=1 name="action"
+                        style="font-family: 'Inclusive Sans'; font-style: oblique ; font-size: large;"><b>Decrypt</b></button>
 
                 </div>
 
+            </form>
+
+            <div> {% if output_data %}
+
+                <label for="inputBox1"><b>Output:</b></label>
+                <button class="output" name="action"
+                    style="font-family:
+                     'Inclusive Sans'; font-style: oblique ; font-size: large; width:97%;"><b>{{output_data}}</b></button>
+
+
+                {% endif %}
             </div>
 
 
+
         </div>
-        
-        <div class="about" style=" height:80px 'Newsreader'; margin-left: 40px; margin-right: 40px;font-size: 60px; font-weight: bold; margin-bottom: 0px;" ><p style="margin: 0%; margin-bottom: 10px;">About the Cypher</p> 
+
+        <div class="third-scroll">
+
+
+            <h1 class="heading2"
+                style=" letter-spacing:2px; font-style: italic; display:flex; justify-content:  center; font-family: 'Inclusive Sans', sans-serif;">
+                MATRIX REPRESENTATION
+
+            </h1>
+
+            <div class="pc-output-value l9" style="display:flex; justify-content:  space-around;"
+                id="dialogv6411c5581d498_square">
+
+                <table class="matrix-table">
+                    <tbody>
+                        <tr>
+                            <td>{{output_data_1}}</td>
+                            <td>{{output_data_2}}</td>
+                            <td>{{output_data_3}}</td>
+                            <td>{{output_data_4}}</td>
+                            <td>{{output_data_5}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{output_data_6}}</td>
+                            <td>{{output_data_7}}</td>
+                            <td>{{output_data_8}}</td>
+                            <td>{{output_data_9}}</td>
+                            <td>{{output_data_10}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{output_data_11}}</td>
+                            <td>{{output_data_12}}</td>
+                            <td>{{output_data_13}}</td>
+                            <td>{{output_data_14}}</td>
+                            <td>{{output_data_15}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{output_data_16}}</td>
+                            <td>{{output_data_17}}</td>
+                            <td>{{output_data_18}}</td>
+                            <td>{{output_data_19}}</td>
+                            <td>{{output_data_20}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{output_data_21}}</td>
+                            <td>{{output_data_22}}</td>
+                            <td>{{output_data_23}}</td>
+                            <td>{{output_data_24}}</td>
+                            <td>{{output_data_25}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+            <div><a Name="about"></a></div>
+
+        </div>
+
+
+    </div>
+
+    <div style=" position:relative;
+        left: -10px;
+        right: 0px;
+    background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); width: 101%;">
+
+
+
+        <div class="about"
+            style=" padding-top:40px;  margin-left: 40px; margin-right: 40px;font-size: 60px; margin-top: 30px; font-weight: bold; margin-bottom: 0px; height: 50px; ">
+            <p class="head2" style="margin: 0%; margin-bottom: 10px; font-family: 'Inclusive Sans', sans-serif;">About
+                the Cypher</p>
         </div>
         <div class="fourth" style="font-size: larger; text-align: justify; margin-left: 100px; margin-right: 100px;">
 
-  
+
             <div>
-                <p class="text">The Playfair cipher was the first practical digraph substitution cipher. The scheme
-                    was invented in 1854 by Charles Wheatstone but was named after Lord Playfair
-                    who promoted the use of the cipher. In Playfair cipher unlike traditional cipher
-                    we encrypt a pair of alphabets(digraphs) instead of a single alphabet.</p>
+                <p class="text">The Playfair cipher was the first practical digraph substitution cipher. This scheme
+                    was invented in 1854 by Charles Wheatstone, but was named after Lord Playfair
+                    who promoted the use of this cipher. In Playfair cipher, unlike traditional cipher,
+                    we encrypt a pair of alphabets ie, diagraphs instead of a single alphabet.</p>
             </div>
             <b><i>So, how does this work?</i></b>
             <br>
-            <p class="algorithm-description">The algorithm has 2 steps,which are, <b><i>5x5 Key matrix generation</i></b> and <b><i> the actual encryption</i></b>. The matrix generation is simple. The first few letters of the matrix will
-                be the unique letters of the “key”, in the relative order of their occurrence in the key. Then, the
-                remaining alphabets are filled in alphabetic order. You may notice a problem here the number of
+            <p class="algorithm-description">The algorithm has 2 steps, which are, <b><i>5x5 Key Matrix
+                        Generation</i></b> and <b><i> the Actual Encryption</i></b>. The matrix generation is simple.
+                The first unique letters of the 'key' will fill the initial matrix entires, in the relative order of
+                their occurrence in the key. Then, the
+                remaining of the 26 alphabets are filled in alphabetic order. You may notice a problem here, that is the
+                number of
                 alphabets is 26 while the total number of elements in matrix is 25. Hence, to make the algorithm work,
-                we drop a letter, which is usually either i or j</p>
+                we drop a letter, which is usually either i or j.</p>
 
-            <p class="text">Now, how exactly does the <b><i>“actual encryption”</i></b> works?</p>
+            <p class="text">Now, how exactly does the <b><i>'actual encryption'</i></b> take place?</p>
             <p class="text">
-                Firstly, the text to be encrypted is modified so as to be compatible with the
-                algorithm. This involves two things
-                • For the purpose of encryption, we have to pair two adjacent letters in the
+                Initially, we have to pair two adjacent letters in the
                 message. Each pair is called diagraph. Same letters cannot be paired. So,
                 the message must be modified accordingly. To do this, add a bogus letter
-                (say ‘x’) in place of one of them.
-                • The length of the message, after satisfying above condition, must be of
-                even parity. To make it even, add a bogus letter (usually ‘z’) at the last
-                position of the message to complete the pair</p>
-            <p class="text">Once the above two conditions are satisfied, we proceed to the encryption. the
-                encryption process is governed by 3 rules which are as follows:
-            <ul style="padding-left: 130px; padding-right: 130px; ;">
+                (say ‘x’) in one of the letter's place.
+                Now, the length of the message, after satisfying above condition, must be of
+                even parity. Otherwise, to make it even, add another letter (usually ‘z’) at the last
+                position of the message to complete the pairing.</p>
+            <p class="text">Once the above two conditions are satisfied, we proceed to the encryption.<b> The
+                    encryption process is governed by 3 rules which are as follows:</b>
+            <ul style="padding-left: 120px; padding-right: 120px; ;">
                 <li class="bullet">
                     If both elements of a digraph belong to a same row in the key matrix, their
                     corresponding encryption will be the element immediately to the right of
@@ -199,21 +214,59 @@
                     rectangle. Then their encryption will be the elements in other two corners,
                     taken horizontally.</li>
             </ul>
-            Tada, now you can share homework without anyone knowing
-            Decryption will be exact opposite of this.</p>
 
-        <br>
-        
+
+            <a Name="working"></a>
+            Tada, now you can share your homework without anyone knowing! ;p
+            <br>
+            <br>
+            <b>Decryption will be the exact opposite of this.</b></p>
+
+            <br>
         </div>
-
-        <div class="fifth">Powered by Slutty Pegions</div>
     </div>
 
+    </div>
+
+        <div class="working">
+        
+        <div class="subsections">
+            <div class="special">
+                <div class="working-head">The Working</div>
+            
+                <div class="tex22">
+                    This will be the key-matrix formed from our key 'MANGO', and
+                    the digraph formed from our to be encrypted text, 'apple' will be AP-PL-EZ.
+                </div>
+
+            </div>
+                <div class="img"><img src="{% static 'images/empty.jpg' %}" alt="Description of the image"></div>
+            </div>
+
+            <div class="subsections">
+
+                <div class="img"><img src="{% static 'images/1.jpg' %}" alt="Description of the image"></div>
+                <div class="tex22">As A and P are neither in same row nor in the same column, the letters belonging to the
+                    corners of the rectangle formed by A and P, paired horizontally, are taken for encryption.</div>
+            </div>
+
+            <div class="subsections">
+                <div class="tex22">Now, as P and L belong to the same row, the letters to the immediate right of these
+                    letters are taken for encryption.</div>
+                <div class="img"><img src="{% static 'images/2.jpg' %}" alt="Description of the image"></div>
+            </div>
+
+            <div class="subsections">
+
+                <div class="img"><img src="{% static 'images/3.jpg' %}" alt="Description of the image"></div>
+                <div class="tex22">Finally, as E and Z are neither in same row nor in same column, the letters belonging to
+                    corners of the rectangle formed by E and Z, paired horizontally, are taken for encryption.</div>
+            </div>
+        </div>
 
 
+    </div>
+    </div>
 
-
-
-</body>
 
 </html>

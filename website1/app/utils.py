@@ -78,7 +78,7 @@ list1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm',
 # Function to generate the 5x5 key square matrix
 
 
-def generateKeyTable(word, list1):
+def generateKeyTable(word, list1): # word is the key
 	key_letters = []
 	# Appends unique letters in word to key_letters
 	for i in word:  
@@ -159,7 +159,11 @@ def encryptByPlayfairCipher(Matrix, plainList):
 		c1 = 0
 		c2 = 0
 		ele1_x, ele1_y = search(Matrix, plainList[i][0])
+		# ele2_x, ele2_y = search(Matrix, plainList[i][1])
+		# try :
 		ele2_x, ele2_y = search(Matrix, plainList[i][1])
+		# except:
+		# 	print("Error: ", search)
 
 		if ele1_x == ele2_x:
 			c1, c2 = encrypt_RowRule(Matrix, ele1_x, ele1_y, ele2_x, ele2_y)
@@ -300,6 +304,10 @@ def finalOutput(text, key, mode):
 		if i == 'j':
 			text = text.replace(i, 'i')
 
+	for i in key:
+		if i == 'j':
+			key = key.replace(i, 'i')
+
 	if(mode == 0):
 		text = removeSpaces(toLowerCase(text))
 		PlainTextList = Diagraph(FillerLetter(text))
@@ -369,3 +377,5 @@ def MatrixOut(word):
 
 def fillPrev(text, key):
 	return text, key
+
+# finalOutput("apple", "james", 0)

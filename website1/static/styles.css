@@ -176,7 +176,7 @@ font-size : 65px;
     
     /* When input box is clicked (focused), increase its width */
     .inpu1:hover{
-        width: 90%; /* Increased width */
+        width: 60%; /* Increased width */
     }
     .third-scroll{
         margin-top: 30px;

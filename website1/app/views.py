@@ -4,7 +4,8 @@ from .utils import finalOutput, MatrixOut, fillPrev
 
 # Create your views here.
 def home(request):
-    return render(request,"signup.html")
+    default = listToListOfList("ABCDEFGHIKLMNOPQRSTUVWXYZ")
+    return render(request,"signup.html", {'default': default})
 
 def listToListOfList(l):
     return [list(l[i:i+5]) for i in range(0, len(l), 5)]

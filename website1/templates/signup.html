@@ -116,7 +116,7 @@
                             {% for i in matrix %}
                                 <tr>
                                     {% for j in i %}
-                                        <td>{{j}}</td>
+                                        <td>{{j|default:'A'}}</td>
                                     {% endfor %}
                                 </tr>
                             {% endfor %}
@@ -124,7 +124,7 @@
                             {% for i in default %}
                                 <tr>
                                     {% for j in i %}
-                                        <td> {{j}} </td>
+                                        <td> {{j|default:'A'}} </td>
                                     {% endfor %}
                                 </tr>
                             {% endfor %}
